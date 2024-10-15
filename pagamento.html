@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Página de Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .payment-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .payment-options {
+            margin-top: 20px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .payment-option:hover {
+            border-color: #ff3300;
+        }
+
+        .payment-option input {
+            margin-right: 10px;
+        }
+
+        .payment-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background-color: #ff3300;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: #d82a00;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Escolha seu método de pagamento</h2>
+        <div class="payment-options">
+            <!-- Opção de cartão de crédito -->
+            <div class="payment-option" onclick="showPaymentForm('cartao')">
+                <input type="radio" name="payment" id="cartao" checked>
+                <label for="cartao">Cartão de Crédito</label>
+            </div>
+            <!-- Opção de TED -->
+            <div class="payment-option" onclick="showPaymentForm('ted')">
+                <input type="radio" name="payment" id="ted">
+                <label for="ted">TED</label>
+            </div>
+            <!-- Opção de PIX -->
+            <div class="payment-option" onclick="showPaymentForm('pix')">
+                <input type="radio" name="payment" id="pix">
+                <label for="pix">PIX</label>
+            </div>
+        </div>
+
+        <!-- Formulário de pagamento por Cartão de Crédito -->
+        <div id="cartao-form" class="payment-form">
+            <div class="form-group">
+                <label for="numero-cartao">Número do Cartão</label>
+                <input type="text" id="numero-cartao" placeholder="Digite o número do cartão">
+            </div>
+            <div class="form-group">
+                <label for="nome-titular">Nome do Titular</label>
+                <input type="text" id="nome-titular" placeholder="Nome como impresso no cartão">
+            </div>
+            <div class="form-group">
+                <label for="validade-cartao">Validade</label>
+                <input type="text" id="validade-cartao" placeholder="MM/AA">
+            </div>
+            <div class="form-group">
+                <label for="cvv-cartao">CVV</label>
+                <input type="text" id="cvv-cartao" placeholder="Código de segurança (CVV)">
+            </div>
+            <button class="btn-submit">Pagar com Cartão</button>
+        </div>
+
+        <!-- Formulário de pagamento por TED -->
+        <div id="ted-form" class="payment-form">
+            <p>Use os dados abaixo para realizar a transferência via TED:</p>
+            <p><strong>Banco: 123</strong></p>
+            <p><strong>Agência: 4567</strong></p>
+            <p><strong>Conta: 890123-4</strong></p>
+            <button class="btn-submit">Confirmar Pagamento por TED</button>
+        </div>
+
+        <!-- Formulário de pagamento por PIX -->
+        <div id="pix-form" class="payment-form">
+            <p>Use o código abaixo para realizar o pagamento via PIX:</p>
+            <p><strong>código_pix_aleatorio_aqui</strong></p>
+            <div class="qr-code">
+                <p>Pague através do QR Code:</p>
+                <img src="images/pagamentopix.jpeg" alt="QR Code para pagamento via PIX" width="250" height="250">
+            </div>
+            <button class="btn-submit">Confirmar Pagamento PIX</button>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentForm(paymentType) {
+            document.getElementById('cartao-form').style.display = 'none';
+            document.getElementById('ted-form').style.display = 'none';
+            document.getElementById('pix-form').style.display = 'none';
+
+            if (paymentType === 'cartao') {
+                document.getElementById('cartao-form').style.display = 'block';
+            } else if (paymentType === 'ted') {
+                document.getElementById('ted-form').style.display = 'block';
+            } else if (paymentType === 'pix') {
+                document.getElementById('pix-form').style.display = 'block';
+            }
+        }
+
+        // Mostra o formulário do cartão de crédito como padrão
+        showPaymentForm('cartao');
+    </script>
+</body>
+</html>

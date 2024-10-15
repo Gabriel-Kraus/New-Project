@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detalhes do Mercedes-AMG GT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Adicionando Font Awesome -->
+    <style>
+        /* Estilo do carrossel */
+        .carousel {
+            position: relative;
+            max-width: 600px; /* Ajuste a largura do carrossel */
+            margin: 0 auto; /* Centraliza o carrossel */
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra ao redor do carrossel */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+        
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease; /* Transição suave ao mudar as imagens */
+        }
+
+        .carousel-image {
+            width: 100%; /* Largura do carrossel */
+            height: auto; /* Altura ajustável */
+            object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0; /* Impede que a imagem encolha */
+            border-radius: 10px; /* Arredonda as bordas das imagens */
+        }
+
+        .model-detail-section {
+            text-align: center; /* Centraliza o texto dentro da seção */
+            padding: 20px;
+        }
+
+        .btn {
+            background-color: #ff3300;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block; /* Permite a margem acima do botão */
+        }
+
+        .btn:hover {
+            background-color: #d82a00;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-btn i {
+            color: #333; /* Cor do ícone */
+            font-size: 20px;
+        }
+
+        .carousel-btn:hover i {
+            color: #ff3300; /* Muda a cor da seta ao passar o mouse */
+        }
+
+        /* Estilo das especificações */
+        .specifications {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Organiza as especificações em duas colunas */
+            gap: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .spec-item {
+            text-align: left;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .spec-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ff3300;
+        }
+
+        .spec-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Estilo da seção de contato */
+        .contact-section {
+            padding: 20px 0; /* Padding da seção de contato */
+            background-color: #000; /* Fundo preto */
+            text-align: center;
+            color: white; /* Cor do texto em branco para contraste */
+            margin-top: 40px; /* Espaço acima da seção de contato */
+        }
+
+        .contact-section h2 {
+            font-size: 22px; /* Tamanho do título */
+            color: #ff3300; /* Cor do título */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+        }
+
+        .contact-form {
+            max-width: 500px; /* Largura máxima do formulário */
+            margin: 0 auto; /* Centraliza o formulário */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Espaço entre os grupos de formulário */
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px; /* Tamanho da fonte das labels */
+            margin-bottom: 5px; /* Espaço abaixo das labels */
+            color: #fff; /* Cor das labels */
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%; /* Largura total */
+            padding: 8px; /* Padding dos campos */
+            font-size: 14px; /* Tamanho da fonte dos campos */
+            border: 1px solid #ccc; /* Borda dos campos */
+            border-radius: 5px; /* Bordas arredondadas */
+            background-color: #333; /* Fundo escuro para os campos */
+            color: #fff; /* Cor do texto nos campos */
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #bbb; /* Cor dos placeholders */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff3300; /* Cor da borda ao focar */
+        }
+
+        footer {
+            background-color: #000;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h1>RG Auto Luxury</h1>
+            </a>                
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#models">Modelos</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="model-detail-section">
+        <h2>Ford GT Supercharged 2005</h2>
+
+        <!-- Carrossel de Imagens -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="images/car8-a.png" alt="Modelo de Carro 1" class="carousel-image">
+                <img src="images/car8-b.png" alt="Modelo de Carro 1 - Vista 2" class="carousel-image">
+                <img src="images/car8-c.png" alt="Modelo de Carro 1 - Vista 3" class="carousel-image">
+                <img src="images/car8-d.png" alt="Modelo de Carro 1 - Vista 4" class="carousel-image">
+                <img src="images/car8-e.png" alt="Modelo de Carro 1 - Vista 5" class="carousel-image">
+                <img src="images/car8-f.png" alt="Modelo de Carro 1 - Vista 5" class="carousel-image">
+                </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">
+                <i class="fas fa-chevron-left"></i> <!-- Ícone da seta esquerda -->
+            </button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">
+                <i class="fas fa-chevron-right"></i> <!-- Ícone da seta direita -->
+            </button>
+        </div>
+
+        <!-- Especificações -->
+        <div class="specifications">
+            <div class="spec-item">
+                <h4>Motor</h4>
+                <p>V8 5.4 Supercharged</p>
+                <p>558 HP</p>
+                <p>Torque: 69,1 kgfm</p>
+                <p>Aceleração: 0-100 km/h em 3.3 segundos</p>
+                <p>Vel. Máxima: 330 km/h</p>
+            </div>
+            <div class="spec-item">
+                <h4>Transmissão</h4>
+                <p>Transmissão: Manual de 6 Velocidades</p>
+                <p>Modos de condução esportivos e confortáveis</p>
+            </div>
+            <div class="spec-item">
+                <h4>Segurança</h4>
+                <p>Sistema de freios ABS com controle de tração</p>
+                <p>Airbags frontais e laterais</p>
+                <p>Assistente de permanência em faixa</p>
+            </div>
+            <div class="spec-item">
+                <h4>Conforto</h4>
+                <p>Computador de bordo com tela touch</p>
+                <p>Piloto automático adaptativo</p>
+                <p>Ar-condicionado dual-zone</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn">Voltar</a>
+            <a href="pagamento.html" class="btn comprar-agora">Comprar Agora</a>
+          </div>
+
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section">
+        <h2>Entre em Contato</h2>
+        <div class="contact-form">
+            <form action="contact_process.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CarrosDeLuxo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const images = document.querySelectorAll('.carousel-image');
+            const totalImages = images.length;
+
+            currentIndex += direction;
+
+            // Se o índice ultrapassar os limites, reinicie
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+
+            const offset = -currentIndex * 100; // Calcula o deslocamento
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>

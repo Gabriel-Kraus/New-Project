@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Venda de Carros de Luxo</title>
+
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Adiciona rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilo da seção de contato */
+        .contact-section {
+            padding: 40px 0; /* Aumentei o padding para dar mais espaço */
+            background-color: #000; /* Fundo preto */
+            text-align: center;
+            color: white; /* Cor do texto em branco para contraste */
+        }
+
+        .contact-section h2 {
+            font-size: 28px; /* Aumentei o tamanho da fonte do título */
+            color: #ff3300;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            font-size: 16px; /* Aumentei o tamanho do texto */
+            color: #ddd;
+            margin-bottom: 20px; /* Aumentei o espaço abaixo do parágrafo */
+        }
+
+        .contact-form {
+            max-width: 600px; /* Aumentei a largura máxima do formulário */
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Aumentei o espaço entre os campos */
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px; /* Aumentei o tamanho das labels */
+            margin-bottom: 5px; /* Aumentei o espaço abaixo das labels */
+            color: #fff; /* Labels em branco */
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px; /* Aumentei o padding dos campos */
+            font-size: 14px; /* Aumentei o tamanho do texto nos campos */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333; /* Fundo escuro para combinar com o tema */
+            color: #fff; /* Cor do texto em branco */
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #bbb; /* Cor mais clara para os placeholders */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff3300; /* Cor laranja ao focar no campo */
+        }
+
+        .btn {
+            background-color: #ff3300;
+            color: white;
+            padding: 10px 20px; /* Botão um pouco maior */
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px; /* Margem superior para o botão */
+        }
+
+        .btn:hover {
+            background-color: #d82a00;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>RG Auto Luxury</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#models">Modelos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Seu Carro dos Sonhos Aguarda</h2>
+            <p>Descubra o luxo e desempenho dos nossos modelos exclusivos.</p>
+            <a href="#models" class="btn">Explorar Modelos</a>
+        </div>
+    </section>
+
+    <!-- Seção de Modelos -->
+    <section id="models" class="models-section">
+        <h2>Nossos Modelos</h2>
+        <div class="model-container">
+            <div class="model-card">
+                <img src="images/car1-e.png" alt="Modelo de Carro 1">
+                <h3>McLaren 720s</h3>
+                <p>A partir de R$ 2.575.372</p>
+                <a href="model1.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car2.png" alt="Modelo de Carro 2">
+                <h3>Huracán Tecnica</h3>
+                <p>A partir de R$ 3.479.000</p>
+    
+                <a href="model2.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/Car3.png" alt="Modelo de Carro 3">
+                <h3>Mercedes-AMG GT</h3>
+                <p>A partir de R$ 1.625.000</p>
+                <a href="model3.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car4-a.png" alt="Modelo de Carro 3">
+                <h3>Ferrari F40 1987</h3>
+                <p>A partir de R$ 3.900.000</p>
+                <a href="model4.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car5-a.png" alt="Modelo de Carro 3">
+                <h3>Porsche 911 Gt3 Rs</h3>
+                <p>A partir de R$ 3.579.000</p>
+                <a href="model5.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car6-a.png" alt="Modelo de Carro 3">
+                <h3>Huracán Evo</h3>
+                <p>A partir de R$ 4.899.990</p>
+                <a href="model6.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car7-b.png" alt="Modelo de Carro 3">
+                <h3>Ford Mustang GT</h3>
+                <p>A partir de R$ 395.000</p>
+                <a href="model7.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car8-a.png" alt="Modelo de Carro 3">
+                <h3>Ford GT</h3>
+                <p>A partir de R$ 1.999.999</p>
+                <a href="model8.html" class="btn">Saiba Mais</a>
+            </div>
+
+            <div class="model-card">
+                <img src="images/car9-a.png" alt="Modelo de Carro 3">
+                <h3>Mercedes-Benz AMG</h3>
+                <p>A partir de R$ 1.634.999</p>
+                <a href="model9.html" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+       <!-- Seção de Contato -->
+       <section class="contact-section">
+        <h2>Entre em Contato</h2>
+        <div class="contact-form">
+            <form action="contact_process.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const images = document.querySelectorAll('.carousel-image');
+            const totalImages = images.length;
+
+            currentIndex += direction;
+
+            // Se o índice ultrapassar os limites, reinicie
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+
+            const offset = -currentIndex * 100; // Calcula o deslocamento
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 RG Auto Luxury. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
