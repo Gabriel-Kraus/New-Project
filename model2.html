@@ -7,34 +7,34 @@
     <title>Detalhes da Lamborghini Huracan 2014</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Adicionando Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Estilo do carrossel */
+       
         .carousel {
             position: relative;
-            max-width: 600px; /* Ajuste a largura do carrossel */
-            margin: 0 auto; /* Centraliza o carrossel */
+            max-width: 600px; 
+            margin: 0 auto; 
             overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra ao redor do carrossel */
-            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 10px; 
         }
         
         .carousel-images {
             display: flex;
-            transition: transform 0.5s ease; /* Transição suave ao mudar as imagens */
+            transition: transform 0.5s ease; 
         }
 
         .carousel-image {
-            width: 100%; /* Largura do carrossel */
-            height: auto; /* Altura ajustável */
-            object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+            width: 100%;
+            height: auto; 
+            object-fit: cover; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0; /* Impede que a imagem encolha */
-            border-radius: 10px; /* Arredonda as bordas das imagens */
+            flex-shrink: 0;
+            border-radius: 10px; 
         }
 
         .model-detail-section {
-            text-align: center; /* Centraliza o texto dentro da seção */
+            text-align: center; 
             padding: 20px;
         }
 
@@ -45,7 +45,7 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 20px;
-            display: inline-block; /* Permite a margem acima do botão */
+            display: inline-block;
         }
 
         .btn:hover {
@@ -73,19 +73,18 @@
         }
 
         .carousel-btn i {
-            color: #333; /* Cor do ícone */
+            color: #333; 
             font-size: 20px;
         }
 
         .carousel-btn:hover i {
-            color: #ff3300; /* Muda a cor da seta ao passar o mouse */
+            color: #ff3300; 
         }
 
-        /* Estilo das especificações */
         .specifications {
             margin-top: 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Organiza as especificações em duas colunas */
+            grid-template-columns: 1fr 1fr; 
             gap: 20px;
             padding: 20px;
             background-color: #f7f7f7;
@@ -114,57 +113,56 @@
             color: #555;
         }
 
-        /* Estilo da seção de contato */
         .contact-section {
-            padding: 20px 0; /* Padding da seção de contato */
-            background-color: #000; /* Fundo preto */
+            padding: 20px 0; 
+            background-color: #000; 
             text-align: center;
-            color: white; /* Cor do texto em branco para contraste */
-            margin-top: 40px; /* Espaço acima da seção de contato */
+            color: white; 
+            margin-top: 40px; 
         }
 
         .contact-section h2 {
-            font-size: 22px; /* Tamanho do título */
-            color: #ff3300; /* Cor do título */
-            margin-bottom: 10px; /* Espaço abaixo do título */
+            font-size: 22px; 
+            color: #ff3300;
+            margin-bottom: 10px; 
         }
 
         .contact-form {
-            max-width: 500px; /* Largura máxima do formulário */
-            margin: 0 auto; /* Centraliza o formulário */
-            text-align: left; /* Alinha o texto à esquerda */
+            max-width: 500px;
+            margin: 0 auto; 
+            text-align: left; 
         }
 
         .form-group {
-            margin-bottom: 15px; /* Espaço entre os grupos de formulário */
+            margin-bottom: 15px; 
         }
 
         .form-group label {
             display: block;
-            font-size: 14px; /* Tamanho da fonte das labels */
-            margin-bottom: 5px; /* Espaço abaixo das labels */
-            color: #fff; /* Cor das labels */
+            font-size: 14px; 
+            margin-bottom: 5px; 
+            color: #fff; 
         }
 
         .form-group input,
         .form-group textarea {
-            width: 100%; /* Largura total */
-            padding: 8px; /* Padding dos campos */
-            font-size: 14px; /* Tamanho da fonte dos campos */
-            border: 1px solid #ccc; /* Borda dos campos */
-            border-radius: 5px; /* Bordas arredondadas */
-            background-color: #333; /* Fundo escuro para os campos */
-            color: #fff; /* Cor do texto nos campos */
+            width: 100%;
+            padding: 8px; 
+            font-size: 14px; 
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+            background-color: #333;
+            color: #fff; 
         }
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-            color: #bbb; /* Cor dos placeholders */
+            color: #bbb; 
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #ff3300; /* Cor da borda ao focar */
+            border-color: #ff3300; 
         }
 
         footer {
@@ -195,7 +193,6 @@
     <section class="model-detail-section">
         <h2>Lamborghini Huracán Tecnica</h2>
 
-        <!-- Carrossel de Imagens -->
         <div class="carousel">
             <div class="carousel-images">
                 <img src="images/car2.png" alt="Modelo de Carro 1" class="carousel-image">
@@ -204,14 +201,13 @@
                 <img src="images/car2-c.png" alt="Modelo de Carro 1 - Vista 4" class="carousel-image">
                 <img src="images/car2-d.png" alt="Modelo de Carro 1 - Vista 5" class="carousel-image"></div>
             <button class="carousel-btn prev" onclick="moveSlide(-1)">
-                <i class="fas fa-chevron-left"></i> <!-- Ícone da seta esquerda -->
+                <i class="fas fa-chevron-left"></i> 
             </button>
             <button class="carousel-btn next" onclick="moveSlide(1)">
-                <i class="fas fa-chevron-right"></i> <!-- Ícone da seta direita -->
+                <i class="fas fa-chevron-right"></i>
             </button>
         </div>
 
-        <!-- Especificações -->
         <div class="specifications">
             <div class="spec-item">
                 <h4>Motor</h4>
@@ -251,7 +247,6 @@
 
     </section>
 
-    <!-- Seção de Contato -->
     <section class="contact-section">
         <h2>Entre em Contato</h2>
         <div class="contact-form">
@@ -288,14 +283,13 @@
 
             currentIndex += direction;
 
-            // Se o índice ultrapassar os limites, reinicie
             if (currentIndex >= totalImages) {
                 currentIndex = 0;
             } else if (currentIndex < 0) {
                 currentIndex = totalImages - 1;
             }
 
-            const offset = -currentIndex * 100; // Calcula o deslocamento
+            const offset = -currentIndex * 100; 
             document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
         }
     </script>
