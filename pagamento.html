@@ -104,24 +104,24 @@
     <div class="payment-container">
         <h2>Escolha seu método de pagamento</h2>
         <div class="payment-options">
-            <!-- Opção de cartão de crédito -->
+            
             <div class="payment-option" onclick="showPaymentForm('cartao')">
                 <input type="radio" name="payment" id="cartao" checked>
                 <label for="cartao">Cartão de Crédito</label>
             </div>
-            <!-- Opção de TED -->
+       
             <div class="payment-option" onclick="showPaymentForm('ted')">
                 <input type="radio" name="payment" id="ted">
                 <label for="ted">TED</label>
             </div>
-            <!-- Opção de PIX -->
+         
             <div class="payment-option" onclick="showPaymentForm('pix')">
                 <input type="radio" name="payment" id="pix">
                 <label for="pix">PIX</label>
             </div>
         </div>
 
-        <!-- Formulário de pagamento por Cartão de Crédito -->
+     
         <div id="cartao-form" class="payment-form">
             <div class="form-group">
                 <label for="numero-cartao">Número do Cartão</label>
@@ -142,7 +142,7 @@
             <button class="btn-submit">Pagar com Cartão</button>
         </div>
 
-        <!-- Formulário de pagamento por TED -->
+      
         <div id="ted-form" class="payment-form">
             <p>Use os dados abaixo para realizar a transferência via TED:</p>
             <p><strong>Banco: 123</strong></p>
@@ -151,7 +151,7 @@
             <button class="btn-submit">Confirmar Pagamento por TED</button>
         </div>
 
-        <!-- Formulário de pagamento por PIX -->
+ 
         <div id="pix-form" class="payment-form">
             <p>Use o código abaixo para realizar o pagamento via PIX:</p>
             <p><strong>código_pix_aleatorio_aqui</strong></p>
@@ -178,7 +178,6 @@
             }
         }
 
-        // Mostra o formulário do cartão de crédito como padrão
         showPaymentForm('cartao');
     </script>
 </body>
