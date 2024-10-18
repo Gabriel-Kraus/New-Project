@@ -1,4 +1,3 @@
-/* Estilo geral */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     color: #333;
 }
 
-/* Estilo do header */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,10 +42,9 @@ header nav ul li a:hover {
     color: #ff3300;
 }
 
-/* Hero section com imagem de fundo */
 .hero-section {
     height: 80vh;
-    background-image: url('images/car-background.jpg'); /* Aqui você pode colocar a imagem de fundo do carro */
+    background-image: url('images/car-background.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -80,7 +77,6 @@ header nav ul li a:hover {
     background-color: #d82a00;
 }
 
-/* Models section */
 .models-section {
     padding: 50px 0;
     text-align: center;
@@ -135,7 +131,6 @@ header nav ul li a:hover {
     background-color: #d82a00;
 }
 
-/* Contact section */
 .contact-section {
     background-color: #111;
     color: white;
@@ -175,7 +170,6 @@ header nav ul li a:hover {
     background-color: #d82a00;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -185,14 +179,14 @@ footer {
 
 .btn-container {
     display: flex;
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Garante que os botões fiquem alinhados verticalmente no centro */
-    flex-wrap: wrap; /* Permite que os botões se reorganizem caso necessário */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
     margin-top: 20px;
-    width: 100%; /* Garante que o contêiner ocupe 100% da largura */
-    text-align: center; /* Adiciona centralização de texto */
-    gap: 10px; /* Adiciona um espaçamento entre os botões */
-    padding: 10px; /* Garante que o contêiner tenha algum espaço interno */
+    width: 100%; 
+    text-align: center; 
+    gap: 10px; 
+    padding: 10px; 
 }
 
 .btn {
@@ -201,15 +195,15 @@ footer {
     padding: 10px 30px;
     border-radius: 5px;
     text-decoration: none;
-    margin: 0; /* Remove qualquer margem entre os botões */
-    display: inline-block; /* Garante que os botões fiquem em linha */
-    text-align: center; /* Centraliza o texto dentro dos botões */
+    margin: 0; 
+    display: inline-block; 
+    text-align: center; 
 }
 
 .btn.comprar-agora {
-    background-color: #28a745; /* Cor de fundo verde */
+    background-color: #28a745; 
 }
 
 .btn.comprar-agora:hover {
-    background-color: #218838; /* Cor de fundo ao passar o mouse */
+    background-color: #218838; 
 }
